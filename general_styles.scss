@@ -1,1 +1,63 @@
 /* SCSS styles for project0 */
+
+/* Default variables */
+$scss_text-color: #222;
+$scss_text-color_mobile: #f2f2f2;
+
+/* Change bg to dark when on mobile */
+@media (min-width: 600px) {
+    body {
+        background-color: grey;
+        color: $scss_text-color;
+        
+    }
+}
+    @media (max-width: 599px) {
+    body {
+        background-color: black;
+        color: $scss_text-color_mobile;
+    }
+}
+
+/* Styles for unordered lists */
+ul {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+    /* Smaller font for nested lists */
+    ul {
+        font-size: 10px;
+    }
+}
+
+/* Create boxes */
+
+%box-shared {
+    border: 1px solid;
+    padding: 5px;
+}
+
+.green-box {
+    @extend %box-shared;
+    border-color: #12570b;
+    background-color: #94f28a;
+}
+
+.blue-box {
+    @extend %box-shared;
+    border-color: #1224ee;
+    background-color: #9442ee;
+}
+
+/* Special styles */
+
+/* Quotation style */
+#quote-style {
+    font-style: oblique;
+    font-size: large;
+    text-indent: 5px;
+}
+
+/* Tables */
+tr, td {
+    border: 1px, solid, $scss_text-color;
+}
